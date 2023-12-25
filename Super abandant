@@ -1,0 +1,46 @@
+Algorithme TP4Ex5n5
+var k:entier
+ fonction ta(n:entier):reel
+ var
+ a,b,r:entier
+ d:reel
+ debut
+      b<-0
+      pour a allant de 1 à n/2 pas 1 faire
+                r<-n mod a
+                si(r=0)alors
+                    b<-b+a
+                finsi
+      finpour
+      d<- b/n
+      si(d<=1)alors
+      d<-0
+      finsi
+      retourne d
+ fin
+ procedure vsa(k:entier)
+ var
+ i,e,m,u:entier
+  debut
+        m<-0
+        pour u allant de 1 à k pas 1 faire
+        repeter
+         m<-m+1
+        e<-0
+        pour i allant de 1 à m-1 pas 1 faire
+                 si(ta(i)>ta(m))alors
+                 e<-e+1
+                 finsi
+        finpour
+        jusqua (e=0)et(ta(m)>1)
+        ecrire(m,"\n")
+        finpour
+  fin
+Debut
+repeter
+  ecrire("entrer un nombre natural :")
+	lire(k)
+jusqua k>0
+ecrire("les ",k," premier nombre super abandant sont \n")
+vsa(k)
+Fin
