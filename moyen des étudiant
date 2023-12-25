@@ -1,0 +1,26 @@
+algorithme moyen_des_étudiant
+var 
+lesnote:tableau[0..20,0..1000]de reel
+m,note:reel
+i,j,étudiant,matier:entier
+debut
+    ecrire("entrer le nombre des étudiant :")
+    lire(étudiant)
+    ecrire("entrer le nombre des matier :")
+    lire(matier)
+    pour j allant de 0 à  étudiant-1 pas 1 faire
+            pour i allant de 0 à matier-1 pas 1 faire
+                            repeter
+                            ecrire("entrer la note de létudiant n° ",j+1," dans la matier n° ",i+1," :")
+                            lire(lesnote[i,j])
+                            jusqua (lesnote[i,j]>=0)et(lesnote[i,j]<=20)
+            finpour
+    finpour
+    pour j allant de 0 à étudiant-1 pas 1 faire
+            m<-0
+            pour i allant de 0 à matier-1 pas 1 faire
+                            m<-m+lesnote[i,j]
+            finpour
+            ecrire("\nla note de l'étudiant n°",j+1," est :",m/matier)
+    finpour
+fin
